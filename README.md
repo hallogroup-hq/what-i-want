@@ -18,15 +18,51 @@ Art-direct photorealistic image prompts and reference edits across fashion, life
 
 ## Installation
 
-### Antigravity & AI Agent Runtimes
-Clone or copy into your local skills directory:
+Compatible across all major AI coding agents via universal skills CLI (`npx skills`) or standard directory placement.
 
+### 1. Universal Skills CLI (Recommended)
+
+Install globally across supported agents:
 ```bash
-# Global configuration (Antigravity)
-git clone https://github.com/hallogroup-hq/what-i-want.git ~/.gemini/config/skills/what-i-want
+npx skills add hallogroup-hq/what-i-want -g -y
+```
 
-# Workspace-specific configuration
+Or install specifically for Codex:
+```bash
+npx skills add hallogroup-hq/what-i-want -g --agent codex
+```
+
+### 2. OpenAI Codex
+
+**Global (all projects):**
+```bash
+mkdir -p ~/.codex/skills
+git clone https://github.com/hallogroup-hq/what-i-want.git ~/.codex/skills/what-i-want
+```
+
+**Project-level (`.agents/skills` or `.codex/skills`):**
+```bash
+mkdir -p .agents/skills
 git clone https://github.com/hallogroup-hq/what-i-want.git .agents/skills/what-i-want
+```
+
+### 3. Google Antigravity
+
+**Global:**
+```bash
+git clone https://github.com/hallogroup-hq/what-i-want.git ~/.gemini/config/skills/what-i-want
+```
+
+### 4. Claude Code & Cursor
+
+**Claude Code:**
+```bash
+npx skills add hallogroup-hq/what-i-want -g --agent claude-code
+```
+
+**Cursor / Windsurf / Cline:**
+```bash
+npx skills add hallogroup-hq/what-i-want -g --agent cursor
 ```
 
 ---
